@@ -2,8 +2,10 @@ const submitBtn = document.querySelector('form button');
 const address = ['Ba Đình', 'Hoàn Kiếm', 'Tây Hồ', 'Long Biên', 'Cầu Giấy', 'Đống Đa', 'Hai Bà Trưng', 'Hoàng Mai', 'Thanh Xuân', 'Bắc Từ Liêm', 'Nam Từ Liêm', 'Hà Đông', 'Đông Anh', 'Gia Lâm', 'Thanh Trì', 'Mê Linh', 'Đan Phượng', 'Hoài Đức', 'Quốc Oai', 'Chương Mỹ', 'Thanh Oai', 'Thường Tín'];
 const otherAddress = document.querySelector('.form .form-group.other-address');
 const form = document.querySelector('.form');
+const contentBox = document.querySelector('.part2 .list-content');
+const contentItems = document.querySelectorAll('.part2 .content-item');
 const feedbackBox = document.querySelector('#feedback');
-const feedbackGroup = document.querySelectorAll('.feedback-group');
+const feedbackGroups = document.querySelectorAll('.feedback-group');
 
 // Form
 (()=>{
@@ -95,11 +97,19 @@ submitBtn.onclick = function () {
 window.addEventListener('scroll',()=>{
     const clientHeight = window.innerHeight;
     const feedbackTop = feedbackBox.getBoundingClientRect().top;
+    const contentTop = contentBox.getBoundingClientRect().top;
     if(feedbackTop/clientHeight <= 0.8){
-        feedbackGroup.forEach((feedback, index) =>{
+        feedbackGroups.forEach((feedback, index) =>{
             setTimeout(()=>{
                 feedback.classList.add('active');
             },index*500);
+        })
+    }
+    if(contentTop/clientHeight <= 0.8){
+        contentItems.forEach((item, index) =>{
+            setTimeout(()=>{
+                item.classList.add('active');
+            },index*400);
         })
     }
 })
