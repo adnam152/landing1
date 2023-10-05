@@ -112,4 +112,15 @@ window.addEventListener('scroll',()=>{
             },index*400);
         })
     }
-})
+});
+
+(()=>{
+    const rootWidth = 1536;
+    const rootHeight = 747;
+    const currentWidth = window.innerWidth;
+    const container = document.querySelector('#container');
+    container.style.maxWidth = rootWidth + 'px';
+    if(currentWidth > rootWidth){
+        container.style.scale = currentWidth/rootWidth;
+    }
+})();

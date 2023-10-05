@@ -90,12 +90,14 @@ html {
     transform: none;
 }
 
-body{
+#container{
     background-image: url(./image/bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position:top center;
     width: 100%;
     overflow-x: hidden;
+    transform-origin: top left;
 }
 /* Header */
 header img{
@@ -478,3 +480,8 @@ footer .logo{
 
 
 /*  */
+@media (max-width: 1900) {
+    body{
+        background-size: 100% cover;
+    }
+}
