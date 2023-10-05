@@ -97,14 +97,13 @@ body{
     width: 100%;
     overflow-x: hidden;
 }
-
 /* Header */
 header img{
     height: 3.5rem;
 }
 
-.part2, .part3, .part4{
-    margin-top: 80px;
+.part2, .part4{
+    margin-top: 5rem;
 }
 /* part1 */
 .part1 .img-title img{
@@ -138,21 +137,12 @@ header img{
     position: relative;
     width: max-content;
 }
-.part1 img.left{
-    width: 15rem;
-    position: absolute;
-    top: 0%;
-    right: 105%;
-    transform: translateY(-45%);
+.part1 .bg-img{
+    width: 270%;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%);
 }
-.part1 img.right{
-    width: 11rem;
-    position: absolute;
-    top: 0%;
-    left: 115%;
-    transform: translateY(-46%);
-}
-
 .form {
     background-color: #109f5d;
     font-family: AvoBoldItalic;
@@ -161,6 +151,9 @@ header img{
     border-radius: 50px;
     height: max-content;
     box-shadow: 0 0 20px white;
+    position: relative;
+    transform: translateY(-5%);
+    z-index: 2;
 }
 .form-in{
     animation: form-in 0.8s ease-in-out;
@@ -202,7 +195,6 @@ header img{
     color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid white;
 }
-
 .form input:focus,
 .form select:focus {
     color: white;
@@ -218,8 +210,25 @@ header img{
 .form option{
     background-color: var(--gr);
 }
+.part1 img.left{
+    width: 15rem;
+    position: absolute;
+    top: 0%;
+    right: 105%;
+    transform: translateY(-45%);
+}
+.part1 img.right{
+    width: 11rem;
+    position: absolute;
+    top: 0%;
+    left: 115%;
+    transform: translateY(-46%);
+}
 
 /* part 2 */
+.part2 {
+    position: relative;
+}
 .part2 .content img{
     width: 100%;
     object-fit: contain;
@@ -285,6 +294,9 @@ header img{
 
 
 /* part3 */
+.part3{
+    margin-top: 10rem;
+}
 .part3 .iframe-box{
     position: relative;
     margin: 0;
@@ -316,6 +328,20 @@ header img{
 }
 
 /* part4 */
+.part4{
+    position: relative;
+}
+.part4 .bg-img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-20%);
+    z-index: -1;
+}
+.part4 .bg-img img{
+    width: 100%;
+}
 .part4 img.hc{
     width: 35%;
     object-fit: cover;
